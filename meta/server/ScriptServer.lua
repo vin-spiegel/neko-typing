@@ -1,9 +1,10 @@
 ---@meta
 
+---require list
 ---
 ---@class ScriptField
+---@class ScriptRoomPlayer
 ---@class System.Object
-
 ---@class Closure
 ---@class ScriptEventPublisher
 ---이 이벤트가 발생했을 때, 호출할 루아 함수를 등록합니다.
@@ -14,7 +15,11 @@
 ---@field Call2 System.Object
 --- 등록한 루아 함수를 삭제합니다.
 ---@field Remove Closure
+---
 
+---@프로퍼티
+
+---
 ---게임 서버를 스크립트로 조작할 수 있게 해주는 서버 클래스 입니다.
 ---
 ---게임내의 유저 접속, 해제, 채팅 등 게임 내에서 일어나는 이벤트에 이벤트 처리기(리스너)를 추가할 수 있습니다
@@ -227,4 +232,29 @@
 ---     [1] player: 파티에서 나갈 유닛
 ---     [2] party: 나갈 파티
 ---@field playerLeavePartyCallback Closure
+--- 현재 게임에 접속해 있는 플레이어 목록
+---@field players ScriptRoomPlayer
+--- 몬스터가 죽었을 때의 커스텀 보상 콜백 함수입니다
+---
+--- **콜백 함수의 형식:**
+--- ```
+---  function(unit: ScriptUnit, monster: ScriptUnit, damage: int)
+--- ```
+--- **반환값:** 없음
+---
+---     [1] unit: 몬스터를 죽인 유닛
+---     [2] monster: 죽은 몬스터 유닛
+---     [3] damage: 입힌 데미지
+---@field rewardCallback Closure
+--- 플레이어가 말했을 때의 콜백 함수입니다
+---
+--- **콜백 함수의 형식:**
+--- ```
+---  function(player: ScriptRoomPlayer , text: string)
+--- ```
+--- **반환값:** 없음
+---
+---     [1] player: 말한 플레이어
+---     [2] text: 플레이어가 말한 대사
+---@field sayCallback Closure
 Server = {}
