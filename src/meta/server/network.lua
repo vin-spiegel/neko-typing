@@ -7,6 +7,7 @@
 ---@class TGameCharacter
 ---@class TGameJob
 ---@class TGameMapStub
+---몬스터 정보가 들어있는 객체입니다
 ---@class TGameMonster
 ---@class TGameSkill
 ---@class TGameStrings

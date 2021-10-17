@@ -16,8 +16,8 @@ https://marketplace.visualstudio.com/items?itemName=sumneko.lua
 ## 미리보기
 **자동완성**
 
-![ex_screenshot](./src/img/자동완성.png)
+![ex_screenshot](./src/img/자동완성.gif)
 
 **툴팁**
 
-![ex_screenshot](./src/img/툴팁.png)
+![ex_screenshot](./src/img/툴팁.gif)
