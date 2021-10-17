@@ -5,7 +5,9 @@
 ---@class ScriptField
 ---@class ScriptRoomPlayer
 ---@class System.Object
+---@class ScriptUnit
 ---@class Closure
+---@class ScriptDropItem
 ---@class ScriptEventPublisher
 ---이 이벤트가 발생했을 때, 호출할 루아 함수를 등록합니다.
 ---@field Add Closure
@@ -258,3 +260,18 @@
 ---     [2] text: 플레이어가 말한 대사
 ---@field sayCallback Closure
 Server = {}
+
+---드롭 아이템을 생성합니다
+---@param dataID number 아이템의 데이터ID
+---@param count number 갯수
+---@param level number 아이템 레벨(기본: 0)
+---@return ScriptDropItem ScriptDropItem 생성된 드롭 아이템 객체
+Server.CreateDropItem = function(dataID, count, level)
+end
+
+---이벤트 유닛을 생성합니다
+---@param infoList table { name: string, imagePath: string, fixedDirection: boolean, startCondition: number }
+---@param scripts string 문자열로 된 루아 스크립트
+---@return ScriptUnit ScriptUnit 유닛객체
+Server.CreateEventUnit = function(infoList, scripts)
+end
