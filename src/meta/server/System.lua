@@ -1,0 +1,7 @@
+---@meta
+---@class System.Object
+---@class System.Collections.Generic.List --number
+---@class Closure
+---@class LuaTable
+---@class LuaFunction
+---@class double

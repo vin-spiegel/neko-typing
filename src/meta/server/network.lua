@@ -12,6 +12,7 @@
 ---@class TGameSkill
 ---@class TGameStrings
 ---@class TGameTileset
+---공용 이벤트 정보
 ---@class TGameCommonEvent
 ---@field conditionSwitch1ID number
 ---@field l_name string

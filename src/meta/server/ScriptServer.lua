@@ -1,9 +1,5 @@
 ---@meta
----@class System.Object
----@class System.Collections.Generic.List --number
----@class Closure
 
----@class ScriptUnit
 ---@class ScriptRoomPlayer
 ---@class ScriptField
 ---@class ScriptParty
