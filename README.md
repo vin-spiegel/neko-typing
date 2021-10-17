@@ -11,4 +11,13 @@ https://marketplace.visualstudio.com/items?itemName=sumneko.lua
 
 ![ex_screenshot](https://github.com/sumneko/vscode-lua/raw/master/images//Install%20In%20VSCode.gif)
 
+***step 3***: 메뉴>파일> 기본설정> 사용자 코드 조각> lua 언어로 snippets생성 > 다운받은 .vscode폴더파일 붙혀넣기
+
 ## 미리보기
+**자동완성**
+
+![ex_screenshot](./src/img/자동완성.png)
+
+**툴팁**
+
+![ex_screenshot](./src/img/툴팁.png)
