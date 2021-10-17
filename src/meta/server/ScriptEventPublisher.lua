@@ -10,6 +10,3 @@
 ---@field Call2 System.Object
 --- 등록한 루아 함수를 삭제합니다.
 ---@field Remove Closure
-
-Server.GetSkill(id).Add(Closure)
-Server.GetTopic(topic).Add(Closure)
