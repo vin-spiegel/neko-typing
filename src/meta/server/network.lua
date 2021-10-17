@@ -1,0 +1,22 @@
+---@meta
+---@class TItem
+---@class TGameBuff
+---@class TGameAnimation
+---@class TGameMapEventPage
+---@class TGameItem
+---@class TGameCharacter
+---@class TGameJob
+---@class TGameMapStub
+---@class TGameMonster
+---@class TGameSkill
+---@class TGameStrings
+---@class TGameTileset
+
+---@class TGameCommonEvent
+---@field conditionSwitch1ID number
+---@field l_name string
+---@field name string
+---@field page TGameMapEventPage
+---@field startCondition number
+---@field targetPlayerSelector System.Collections.Generic.List
+TGameCommonEvent = {}

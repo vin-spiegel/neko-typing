@@ -1,0 +1,60 @@
+{
+	//ScriptServer
+    "ScriptServer":{
+        "scope":"lua",
+        "prefix": "Server",
+        "body": "Server",
+        "description": [
+            "ScriptServer\n",
+            "게임 서버를 스크립트로 조작할 수 있게 해주는 서버 클래스 입니다"
+        ]
+    },
+    "Server.GetSkill":{
+        "scope":"lua",
+        "prefix": "Server.GetSkill",
+        "body": "Server.GetSkill( id )",
+        "description": [
+            "ScriptServer.GetSkill\n",
+            "데이터베이스의 스킬 정보를 가져옵니다"
+        ]
+    },
+    "Server.GetTopic":{
+        "scope":"lua",
+        "prefix": "Server.GetTopic",
+        "body": "Server.GetTopic( topic )",
+        "description": [
+            "ScriptServer.GetTopic\n",
+            "특정 Topic에 대한 이벤트 콜백을 가져옵니다\n",
+            "(클라이언트에서 보낸 특정 Topic에 대한 이벤트를 처리합니다)"
+        ]
+    },
+
+	//ScriptEventPublisher
+	"ScriptEventPublisher.Add":{
+        "scope":"lua",
+        "prefix": ".Add",
+        "body": ".Add( Closure )",
+        "description": [
+            "ScriptEventPublisher.Add(Closure)\n",
+            "이 이벤트가 발생했을 때, 호출할 루아 함수를 등록합니다"
+        ]
+    },
+	"ScriptEventPublisher.Call":{
+        "scope":"lua",
+        "prefix": ".Call",
+        "body": ".Call( Object )",
+        "description": [
+            "ScriptEventPublisher.Call(Object)\n",
+            "이 이벤트를 호출합니다"
+        ]
+    },
+	"ScriptEventPublisher.Remove":{
+        "scope":"lua",
+        "prefix": ".Remove",
+        "body": ".Remove( Closure )",
+        "description": [
+            "ScriptEventPublisher.Remove(Closure)\n",
+            "등록한 루아 함수를 삭제합니다"
+        ]
+    },
+}

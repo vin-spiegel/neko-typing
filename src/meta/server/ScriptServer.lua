@@ -1,27 +1,15 @@
 ---@meta
-
----require list
----
----@class ScriptField
----@class ScriptRoomPlayer
 ---@class System.Object
----@class ScriptUnit
+---@class System.Collections.Generic.List --number
 ---@class Closure
+
+---@class ScriptUnit
+---@class ScriptRoomPlayer
+---@class ScriptField
+---@class ScriptParty
 ---@class ScriptDropItem
----@class ScriptEventPublisher
----이 이벤트가 발생했을 때, 호출할 루아 함수를 등록합니다.
----@field Add Closure
----이 이벤트를 호출합니다.
----@field Call System.Object
---- 이 이벤트를 호출합니다. ( table, Object )
----@field Call2 System.Object
---- 등록한 루아 함수를 삭제합니다.
----@field Remove Closure
----
+---@class ScriptClan
 
----@프로퍼티
-
----
 ---게임 서버를 스크립트로 조작할 수 있게 해주는 서버 클래스 입니다.
 ---
 ---게임내의 유저 접속, 해제, 채팅 등 게임 내에서 일어나는 이벤트에 이벤트 처리기(리스너)를 추가할 수 있습니다
@@ -270,8 +258,229 @@ Server.CreateDropItem = function(dataID, count, level)
 end
 
 ---이벤트 유닛을 생성합니다
----@param infoList table { name: string, imagePath: string, fixedDirection: boolean, startCondition: number }
----@param scripts string 문자열로 된 루아 스크립트
+---@param infoList? table { name?: string, imagePath?: string, fixedDirection?: boolean, startCondition?: number }
+---@param scripts? string 문자열로 된 루아 스크립트
 ---@return ScriptUnit ScriptUnit 유닛객체
 Server.CreateEventUnit = function(infoList, scripts)
+end
+
+---특정 맵 ID의 필드를 임시로 생성합니다
+---@param mapID number 생성할 맵 데이터ID
+---@return ScriptField ScriptField 생성된 필드 객체
+Server.CreateField = function(mapID)
+end
+
+---아이템을 생성합니다
+---@param dataID number 아이템 ID (데이터베이스)
+---@param count number 갯수
+---@return TItem TItem Titem객체
+Server.CreateItem = function(dataID, count)
+end
+
+---파티를 생성합니다
+---@param name string 파티이름
+---@param maxPlayer number 파티의 최대 플레이어 수 (최대: 4)
+---@return ScriptParty ScriptParty 파티 정보 객체
+Server.CreateParty = function(name, maxPlayer)
+end
+
+---스크립트의 작동 시간을 측정합니다.
+---
+---출력 경로는 해당 프로젝트 폴더/ScriptPlayTimeAverage.txt 의 이름으로 나옵니다.
+---
+---테스트 플레이에서만 사용 가능합니다.
+Server.ExportAverage = function()
+end
+
+---클라이언트로 Topic에 대해 이벤트를 보냅니다.
+---@param topic string 보낼 Topic
+---@vararg string 함께 보낼 인자들
+Server.FireEvent = function(topic, ...)
+end
+
+---데이터베이스의 애니메이션 정보를 가져옵니다
+---@param id number 애니메이션 ID
+---@return TGameAnimation TGameAnimation 데이터베이스의 애니메이션 정보
+Server.GetAnimation = function(id)
+end
+
+---데이터베이스의 상태(버프) 정보를 가져옵니다
+---@param id number 상태(버프) ID
+---@return TGameBuff TGameBuff 데이터베이스의 상태(버프) 정보
+Server.GetBuff = function(id)
+end
+
+---데이터베이스의 캐릭터 정보를 가져옵니다
+---@param id number 캐릭터 ID
+---@return TGameCharacter TGameCharacter 데이터베이스 캐릭터 정보
+Server.GetCharacter = function(id)
+end
+
+---클랜정보를 id로 가져옵니다
+---@param id number 클랜 ID
+---@return ScriptClan ScriptClan 클랜 정보
+Server.GetClanByID = function(id)
+end
+
+---클랜정보를 이름로 가져옵니다
+---@param name string 클랜 이름
+---@return ScriptClan ScriptClan 클랜 정보
+Server.GetClanByID = function(name)
+end
+
+---클랜정보를 이름로 가져옵니다
+---@param id number 이벤트 ID
+---@return TGameCommonEvent TGameCommonEvent 공용 이벤트 정보
+Server.GetCommonEvent = function(id)
+end
+
+---특정 맵 ID의 필드를 가져옵니다.
+---@param mapID number 가져올 맵 데이터 ID
+---@param channelID number 채널 ID
+---@return ScriptField ScriptField ID에 맞는 필드 객체
+Server.GetField = function(mapID, channelID)
+end
+
+---데이터베이스 아이템 정보
+---@param id number 아이템 ID
+---@return TGameItem TGameItem 데이터베이스 아이템 정보
+Server.GetItem = function(id)
+end
+
+---데이터베이스의 직업 정보를 가져옵니다
+---@param id number 직업 ID
+---@return TGameJob TGameJob 데이터베이스의 직업 정보
+Server.GetJob = function(id)
+end
+
+---맵 데이터 정보를 가져옵니다
+---@param id number 맵 ID
+---@param parent TGameMapStub 선택된 맵의 부모 (기본: nil)
+---@return TGameMapStub TGameMapStub 맵 데이터 정보
+Server.GetMap = function(id, parent)
+end
+
+---데이터베이스의 몬스터 정보를 가져옵니다
+---@param id number 몬스터 ID
+---@return TGameMonster TGameMonster 데이터베이스의 몬스터 정보
+Server.GetMonster = function(id)
+end
+
+---몬스터의 AI를 가져옵니다
+---@param id number 대상 몬스터의 ID
+---@return Closure Closure AI 클로저 함수
+Server.GetMonsterAI = function(id)
+end
+
+---펫의 AI를 가져옵니다
+---@param id integer 대상 펫의 ID
+---@return Closure Closure AI 클로저 함수
+Server.GetPetAI = function(id)
+end
+
+---데이터베이스의 스킬 정보를 가져옵니다
+---@param id number 스킬 ID
+---@return TGameSkill TGameSkill 데이터베이스의 스킬 정보
+Server.GetSkill = function(id)
+end
+
+---데이터베이스의 시스템 용어 정보를 가져옵니다
+---@return TGameStrings TGameStrings 데이터베이스의 시스템 용어 정보
+Server.GetStrings = function()
+end
+
+---데이터베이스의 타일셋 정보를 가져옵니다
+---@param id integer 타일셋 id
+---@return TGameTileset TGameTileset 데이터베이스의 타일셋 정보
+Server.GetTileset = function(id)
+end
+
+---특정 Topic에 대한 이벤트 콜백을 가져옵니다
+---
+---(클라이언트에서 보낸 특정 Topic에 대한 이벤트를 처리합니다)
+---@param topic string 보낼 Topic
+---@return ScriptEventPublisher ScriptEventPublisher 이벤트 콜백
+Server.GetTopic = function(topic)
+end
+
+---월드 변수 값을 가져옵니다
+---@param id integer 변수 ID
+---@return number
+Server.GetWorldVar = function(id)
+end
+
+---월드 변수 값을 가져옵니다 (문자열 형식)
+---@param id integer 변수 ID
+---@return string
+Server.GetWorldStringVar = function(id)
+end
+
+---Http GET 요청을 보내고, 데이터를 가져옵니다
+---@param url string 요청을 보낼 대상 URL
+---@param callback Closure 가져온 데이터를 처리하는 콜백
+---@return boolean
+Server.HttpGet = function(url, callback)
+end
+
+---Http POST 요청을 보내고, 데이터를 가져옵니다
+---@param url string 요청을 보낼 대상 URL
+---@param data table 루아 테이블 형식 데이터
+---@param callback Closure 가져온 데이터 처리 콜백
+---@return boolean
+Server.HttpPost = function(url, data, callback)
+end
+
+---Http POST 요청을 보내고, 데이터를 가져옵니다
+---@param url string 요청을 보낼 대상 URL
+---@param data table 루아 테이블 형식 데이터
+---@param callback Closure 가져온 데이터 처리 콜백
+---@return boolean
+Server.HttpPost = function(url, data, callback)
+end
+
+---정해진 시간 후에, 함수를 실행합니다.
+---@param callback Closure 실행할 함수
+---@param t number 실행까지의 대기시간(초)
+Server.RunLater = function(callback, t)
+end
+
+---가운데에 문자열을 표시합니다
+---@param label string 센터 라벨을 표시합니다
+Server.SendCenterLabel = function(label)
+end
+
+---가운데에 문자열을 표시합니다
+---@param msg string 표시할 텍스트
+---@param color number 색 unit color ex) 4294967295U
+Server.SendSay = function(msg, color)
+end
+
+---몬스터의 AI를 등록합니다
+---@param id integer AI를 적용할 대상 몬스터의 데이터 ID
+---@param closure Closure AI 로직 함수
+Server.SetMonsterAI = function(id, closure)
+end
+
+---특정 캐릭터로 등록된 펫에 적용되는 AI를 등록합니다
+---@param id integer AI를 적용할 펫의 캐릭터 ID
+---@param closure Closure AI 로직 함수
+Server.SetPetAI = function(id, closure)
+end
+
+---월드 변수 값을 가져옵니다 (문자열 형식)
+---@param id integer 변수 ID
+---@param value string
+Server.SetWorldStringVar = function(id, value)
+end
+
+---월드 변수 값을 설정합니다
+---@param id integer 변수 ID
+---@param value number
+Server.SetWorldVar = function(id, value)
+end
+
+---정해진 시간 후에 특정한 State를 실행합니다.
+---@param state integer 실행할 State
+---@param time number 실행 시간
+Server.StartState = function(state, time)
 end
