@@ -225,5 +225,4 @@
 ---     [2] party: 나갈 파티
 ---@field playerLeavePartyCallback Closure
 local Server
-
 return Server
