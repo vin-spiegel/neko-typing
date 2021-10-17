@@ -12,7 +12,6 @@
 ---@class TGameSkill
 ---@class TGameStrings
 ---@class TGameTileset
-
 ---@class TGameCommonEvent
 ---@field conditionSwitch1ID number
 ---@field l_name string
@@ -20,4 +19,4 @@
 ---@field page TGameMapEventPage
 ---@field startCondition number
 ---@field targetPlayerSelector System.Collections.Generic.List
-TGameCommonEvent = {}
+-- TGameCommonEvent = {}
