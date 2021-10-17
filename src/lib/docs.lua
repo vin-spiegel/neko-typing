@@ -1,3 +1,6 @@
+---@meta
+
+---
 ---@class ScriptField
 ---@class System.Object
 
@@ -224,5 +227,4 @@
 ---     [1] player: 파티에서 나갈 유닛
 ---     [2] party: 나갈 파티
 ---@field playerLeavePartyCallback Closure
-local Server
-return Server
+Server = {}
