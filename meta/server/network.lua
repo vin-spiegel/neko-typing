@@ -1,5 +1,22 @@
 ---@meta
+
+---network.TItem
 ---@class TItem
+---@field count integer
+---@field dataID integer
+---고유 id
+---@field id integer
+---@field index integer
+---@field inTrade boolean
+---@field level integer
+---@field options TItemOption
+---@field useCloudResource boolean
+
+---@class TItemOption
+---@field statID integer
+---@field type integer
+---@field value number
+
 ---@class TGameBuff
 ---@class TGameAnimation
 ---@class TGameMapEventPage
@@ -20,4 +37,4 @@
 ---@field page TGameMapEventPage
 ---@field startCondition number
 ---@field targetPlayerSelector System.Collections.Generic.List
--- TGameCommonEvent = {}
+TGameCommonEvent = {}

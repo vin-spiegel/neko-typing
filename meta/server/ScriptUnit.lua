@@ -5,8 +5,6 @@
 ---@field untilAt double --버프의 종료 시각입니다 os.date("*t",untilAt) 을 통한 시간 가공이 필요합니다
 ---@field Destroy LuaFunction --해당 버프를 제거합니다
 
-unit.buffs.Destroy()
-
 ---하나의 유닛에 대응하는 클래스입니다
 ---
 ---유닛의 정보를 가져오거나 설정할 수 있습니다
@@ -79,7 +77,7 @@ end
 ---@param attacker ScriptUnit 공격자
 ---@param damage integer 피해량(데미지)
 ---@param skillDataID integer 스킬의 공식을 사용시 공식을 적용할 스킬의 ID (기본값: -1(공식 미적용))
----@param critical boolean 치명타(크리티컬)의 발생 유무
+---@param critical? boolean 치명타(크리티컬)의 발생 유무
 unit.AddDamageBy = function(attacker, damage, skillDataID, critical)
 end
 

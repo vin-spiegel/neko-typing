@@ -480,3 +480,5 @@ end
 ---@param time number 실행 시간
 Server.StartState = function(state, time)
 end
+
+return Server
