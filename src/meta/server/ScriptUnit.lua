@@ -58,6 +58,58 @@ unit.buffs.Destroy()
 ---@field y integer
 unit = {}
 
+--해당 유닛에 상태를 추가합니다
+---@param buffID integer 버프ID
+---@param attacker ScriptUnit 공격한 유닛
+unit.AddBuff = function(buffID, attacker)
+end
+
+---이 유닛에게 피해(데미지)를 입힙니다
+---
+---(단 몬스터 대상으로 해당 함수를 사용시 공격자를 판별할 수 없으므로 보상이 지급되지 않습니다)
+---@param damage integer 입힐 데미지
+---@param skillDataID integer 스킬의 공식을 사용시 공식을 적용할 스킬의 ID (기본값: -1(공식 미적용))
+---@param critical boolean 치명타(크리티컬)의 발생 유무
+unit.AddDamage = function(damage, skillDataID, critical)
+end
+
+---이 유닛에게 피해(데미지)를 입힙니다
+---
+---(이 함수에서는 공격자를 판별할 수 있으므로 몬스터 대상 공격 시 보상이 지급됩니다)
+---@param attacker ScriptUnit 공격자
+---@param damage integer 피해량(데미지)
+---@param skillDataID integer 스킬의 공식을 사용시 공식을 적용할 스킬의 ID (기본값: -1(공식 미적용))
+---@param critical boolean 치명타(크리티컬)의 발생 유무
+unit.AddDamageBy = function(attacker, damage, skillDataID, critical)
+end
+
+---유닛에게 경험치를 지급합니다 (플레이어 유닛일 경우에만 동작합니다)
+---@param amount integer 지급할 경험치의 양
+unit.AddEXP = function(amount)
+end
+
+---유닛의 피로도를 채웁니다 (플레이어 유닛일 경우에만 동작합니다)
+---@param amount integer 채워줄 피로도의 양
+unit.AddFatigue = function(amount)
+end
+
+---유닛에게 골드를 지급합니다 (플레이어 유닛일 경우에만 동작합니다)
+---@param amount integer 지급할 골드의 양
+unit.AddGameMoney = function(amount)
+end
+
+---유닛의 HP를 회복시킵니다
+---@param amount integer 회복시킬 HP양
+unit.AddHP = function(amount)
+end
+
+---유닛에게 아이템을 추가합니다 (플레이어 유닛일 경우에만 동작합니다)
+---@param dataID integer 추가할 아이템의 ID
+---@param count integer 추가할 수량
+---@param notify? boolean 알림 표시 여부 (True/False)
+unit.AddItem = function(dataID, count, notify)
+end
+
 --해당 유닛에게 센터 라벨을 표시합니다
 ---@param msg string 라벨 내용
 unit.SendCenterLabel = function(msg)
