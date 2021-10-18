@@ -108,6 +108,32 @@ end
 unit.AddItem = function(dataID, count, notify)
 end
 
+---유닛에게 TItem 형식으로 아이템을 추가합니다 (플레이어 유닛일 경우에만 동작합니다)
+---@param item TItem 추가할 아이템 객체(TItem)
+---@param notify? boolean 알림 표시 여부 (True/False)
+unit.AddItemByTItem = function(item, notify)
+end
+
+---유닛의 MP를 회복시킵니다
+---@param amount integer 회복시킬 MP양
+unit.AddMP = function(amount)
+end
+
+---유닛의 MP를 회복시킵니다
+---@param characterID integer 펫의 캐릭터 ID (기본값: 0)
+---@param jobID integer 펫의 직업 ID (기본값: 0)
+---@param name string 펫의 이름 (기본값: 펫 캐릭터의 이름)
+---@return int id 등록된 펫의ID(등록 실패시 -1)
+unit.AddPet = function(characterID, jobID, name)
+end
+
+---유닛의 MP를 회복시킵니다
+---@param dataID integer 추가할 스킬의 ID
+---@param level integer 추가할 스킬의 레벨
+---@param notify boolean 알림 표시 여부 (True/False)
+unit.AddSkill = function(dataID, level, notify)
+end
+
 --해당 유닛에게 센터 라벨을 표시합니다
 ---@param msg string 라벨 내용
 unit.SendCenterLabel = function(msg)
