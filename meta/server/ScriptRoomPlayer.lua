@@ -23,7 +23,7 @@ player = {}
 player.AddStorageItemfunction = function(storageID, itemDataID, count)
 end
 
----플레이어의 창고에 아이템을 지급합니다 : void
+---클라이언트에게 Topic에 대한 이벤트를 보냅니다
 ---@param topic integer 보낼 Topic
 ---@vararg ... 함께 보낼 인자들
 player.FireEvent = function(topic, ...)

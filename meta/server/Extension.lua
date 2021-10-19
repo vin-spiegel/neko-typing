@@ -1,0 +1,5 @@
+---@meta
+---@class OnEquipItem
+---@field state string
+---@field item TItem
+---@field slotID integer

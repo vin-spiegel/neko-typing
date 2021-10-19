@@ -1,0 +1,115 @@
+---@meta
+---@alias NekoEquipSlot integer 장착슬롯정보
+---| '0' # HAT 모자
+---| '1' # ARMOR 갑옷
+---| '2' # WEAPON 무기
+---| '3' # SHIELD 방패
+---| '4' # SHOES 신발
+---| '5' # RING1 반지1
+---| '6' # RING2 반지2
+---| '7' # ACC1 악세서리1
+---| '8' # ACC2 악세서리2
+---| '9' # WING 날개
+---@alias NekoItemOptionType integer 아이템 옵션 정보
+---| '0' # NONE
+---| '1' # ADD_STAT 직업 스탯 (+)
+---| '2' # ADD_PERCENT_STAT 직업 스탯 (%)
+---| '3' # ADD_ITEM_PLUS_STAT 아이템 스탯 (+)
+---| '4' # ADD_ITEM_PERCENT_STAT 아이템 스탯 (%)
+---@alias NekoItemType integer 장착슬롯정보
+---| '0' # HAT 모자
+---| '1' # ARMOR 갑옷
+---| '2' # WEAPON 무기
+---| '3' # SHIELD 방패
+---| '4' # SHOES 신발
+---| '5' # RING 반지
+---| '6' # ACC 악세서리
+---| '7' # WING 날개
+---| '8' # POTION 포션
+---| '9' # MATERIAL 재료
+---| '10' # CONSUMABLE 소모품
+---@alias NekoSkillType integer
+---| '0' # HP
+---| '1' # MP
+---@alias NekoStats integer
+---| '  0' # ATTACK 공격력
+---| '  1' # DEFENSE 방어력
+---| '  2' # MAGIC_ATTACK 마법 공격력
+---| '  3' # MAGIC_DEFENSE 마법 방어력
+---| '  4' # AGILITY 민첩
+---| '  5' # LUCKY 행운
+---| '  6' # HP 체력
+---| '  7' # MP 체력
+---| '101 ... 132' # CUSTOM_1 ... CUSTOM_32
+---| '133' # COUNT 커스텀 스탯 종류의 갯수
+---@alias StatusCode integer
+---| '-19' # ALREADY_COMPLETED_COLLECTION
+---| '-24' # ALREADY_EXIST_NAME
+---| '-39' # ALREADY_JOINED_CLAN
+---| '-52' # ALREADY_TRADE_FEED_POSTED
+---| '-14' # ALREADY_TRADING
+---| '-13' # BAD_REQUEST
+---| '-11' # BAG_FULL
+---| '  1' # BOUGHT_NPC_ITEM
+---| '-56' # CANNOT_BUY_MY_ITEM
+---| '-38' # CANNOT_DESTROY_CLAN_WITH_MEMBERS
+---| '-26' # CANNOT_DO_NOW
+---| '-58' # CANNOT_EXCHANGE_TRADE_THIS_ITEM
+---| '-51' # CANNOT_PLAY_ARCADE_HERE
+---| '-43' # CHANNEL_FULL
+---| '-37' # CLAN_PRIVATE
+---| '-57' # DEVELOPER_SHOULD_ALLOW_THIS_FEATURE
+---| '-61' # EVENT_ALREADY_JOINED
+---| '- 1' # FAILED
+---| '-33' # FAILED_EQUIPPED
+---| '- 5' # FAILED_IN_SAME_ROOM
+---| '-53' # GAME_UPDATED_NEEDED
+---| '-29' # INVALID_ITEM_DATA
+---| '-30' # ITEM_EXCHANGE_FULL
+---| '-31' # ITEM_EXCHANGE_SETTLE_FIRST
+---| '-27' # ITEM_HAS_ALREADY_BEEN_SOLD
+---| '-35' # LOGIN_EXPIRED
+---| '-16' # LOW_LEVEL
+---| '-20' # LOW_VERSION
+---| '-44' # MONETIZATION_DISABLED
+---| '-22' # NAME_CONTAINS_BAD_CHARACTER
+---| '-21' # NAME_TOO_LONG
+---| '- 4' # NOT_ALLOWED_FOLLOWS
+---| '-28' # NOT_BUYABLE
+---| '- 2' # NOT_ENOUGH_CASH_MONEY
+---| '-12' # NOT_ENOUGH_GAME_MONEY
+---| '-10' # NOT_ENOUGH_ITEM
+---| '-54' # NOT_ENOUGH_TRADE_MONEY
+---| '-25' # NOT_EXIST_CLAN
+---| '-41' # NOT_EXIST_CLAN_SUB_MASTER
+---| '-60' # NOT_EXIST_GAME_EVENT
+---| '-40' # NOT_EXIST_MAIL
+---| '- 6' # NOT_EXIST_ROOM
+---| '-47' # NOT_FOUND_CHAT
+---| '-36' # NOT_FOUND_CLAN
+---| '-32' # NOT_FOUND_ITEM
+---| '-48' # NOT_FOUND_USE_MAP_ROOM
+---| '- 8' # NOT_FOUND_USER
+---| '-23' # NOT_JOINED_CLAN
+---| '-50' # NOT_USER_MAP_ROOM_MASTER
+---| '-15' # PARTY_FULL
+---| '-18' # PLAYER_BANNED
+---| '-34' # PLAYER_JOINED_OTHER_SERVER
+---| '-62' # PLAYER_SANCTIONED
+---| '-59' # PLEASE_PLAY_FIRST
+---| '-17' # ROOM_PLAYER_BANNED
+---| '  0' # SUCCESS
+---| '- 3' # SUCCESS_INVITED_OFFLINE
+---| '  2' # SUCCESS_NOTHING
+---| '- 9' # SUCCESS_SENT_OFFLINE
+---| '-42' # TOO_MANY_PLAERS_IN_CLAN
+---| '-55' # TRADE_FEED_EXISTS
+---| '-49' # USE_MAP_ROOM_FULL
+---| '-45' # WRONG_NAME
+---| '-46' # WRONG_PASSWORD
+-- Get = function()
+-- end
+---@param status StatusCode
+---@return boolean bool
+IsSuccess = function(status)
+end

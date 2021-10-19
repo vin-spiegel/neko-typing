@@ -64,9 +64,13 @@
 ---@class TGameMapStub
 ---몬스터 정보가 들어있는 객체입니다
 ---@class TGameMonster
+
+---@class network.Tskill
 ---@class TGameSkill
+
 ---@class TGameStrings
 ---@class TGameTileset
+---@class TOnlinePetData
 ---공용 이벤트 정보
 ---@class TGameCommonEvent
 ---@field conditionSwitch1ID number

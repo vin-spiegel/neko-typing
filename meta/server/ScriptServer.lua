@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ScriptField
+---@class Server.Field
 ---@class ScriptParty
 ---@class ScriptDropItem
 ---@class ScriptClan
