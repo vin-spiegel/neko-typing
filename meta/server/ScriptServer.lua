@@ -1,6 +1,5 @@
 ---@meta
 
----@class ScriptRoomPlayer
 ---@class ScriptField
 ---@class ScriptParty
 ---@class ScriptDropItem
@@ -23,23 +22,6 @@
 ---
 ---     클랜 생성이 성공했는지 (True: 클랜 생성 성공, False: 클랜 생성 실패)
 ---@field createClan Closure
---- 유닛의 데미지 계산 공식 콜백 함수입니다 (데미지 공식을 커스텀 할 수 있습니다.)
----
---- **콜백 함수의 형식:**
---- ```
----  function(from: ScriptUnit, to: ScriptUnit, damage: number, skillDataID: number, critical: bool, visible: bool)
---- ```
----     [1] from: 공격 유닛
----     [2] to: 대상 유닛
----     [3] damage: 공격의 데미지
----     [4] skillDataID: 스킬의 데이터 ID
----     [5] critical: 크리티컬 여부
----     [6] visible: 피격 데미지 표시 여부
----
---- **반환값**:
----
----     계산된 데미지, (+ 크리티컬 여부), (+ 피격 데미지 표시 여부)
----@field damageCallback Closure
 ---현재 게임에 생성된 모든 맵(필드)를 가져옵니다.
 ---@field fields ScriptField
 --- 아이템이 추가되었을 때 호출되는 이벤트입니다
@@ -219,7 +201,7 @@
 ---     [2] party: 나갈 파티
 ---@field playerLeavePartyCallback Closure
 --- 현재 게임에 접속해 있는 플레이어 목록
----@field players ScriptRoomPlayer
+---@field players LuaTable { ScriptRoomPlayer }
 --- 몬스터가 죽었을 때의 커스텀 보상 콜백 함수입니다
 ---
 --- **콜백 함수의 형식:**
@@ -481,4 +463,16 @@ end
 Server.StartState = function(state, time)
 end
 
+--- 유닛의 데미지 계산 공식 콜백 함수입니다 (데미지 공식을 커스텀 할 수 있습니다.)
+---@param from ScriptUnit 공격 유닛
+---@param to ScriptUnit 대상 유닛
+---@param dmg integer 공격의 데미지
+---@param skillDataID integer 스킬의 데이터 ID
+---@param critical? boolean 크리티컬 여부
+---@param visible? boolean 피격 데미지 표시 여부
+---@return integer damage 계산된 데미지
+---@return boolean critical?  (+ 크리티컬 여부)
+---@return boolean visible? (+ 피격 데미지 표시 여부)
+function Server.damageCallback(from, to, dmg, skillDataID, critical, visible)
+end
 return Server

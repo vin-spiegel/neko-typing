@@ -49,7 +49,7 @@
 ---@field nameColor integer
 ---@field party integer
 ---@field partyID integer
----@field player integer
+---@field player ScriptRoomPlayer
 ---@field teamTag integer
 ---@field type integer
 ---@field x integer
@@ -127,11 +127,16 @@ end
 unit.AddPet = function(characterID, jobID, name)
 end
 
----유닛의 MP를 회복시킵니다
+---유닛에게 스킬을 추가합니다 (플레이어 유닛일 경우에만 동작합니다)
 ---@param dataID integer 추가할 스킬의 ID
 ---@param level integer 추가할 스킬의 레벨
 ---@param notify boolean 알림 표시 여부 (True/False)
 unit.AddSkill = function(dataID, level, notify)
+end
+
+---유닛의 특정 스킬을 제거합니다 (플레이어 유닛일 경우에만 동작합니다)
+---@param dataID integer 제거할 스킬의 ID
+unit.RemoveSkill = function(dataID)
 end
 
 --해당 유닛에게 센터 라벨을 표시합니다
