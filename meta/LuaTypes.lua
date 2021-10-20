@@ -1,6 +1,5 @@
 ---@meta
----@class float
----@class Closure
+---@class number
 ---@class LuaTable
 ---@class LuaFunction
 ---@class double

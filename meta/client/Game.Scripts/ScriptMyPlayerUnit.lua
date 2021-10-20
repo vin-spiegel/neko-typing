@@ -7,31 +7,31 @@
 local unit = {}
 --* 특정 아이템의 쿨타임을 가져옵니다
 ---@param itemDataID integer 대상 아이템의 데이터 ID
----@return float cooltime 쿨타임 (재사용 대기시간)
+---@return number cooltime 쿨타임 (재사용 대기시간)
 unit.GetItemColling = function(itemDataID)
 end
 
 --* 특정 스킬의 쿨타임을 가져옵니다
 ---@param itemDataID integer 대상 스킬의 데이터 ID
----@return float cooltime 쿨타임 (재사용 대기시간)
+---@return number cooltime 쿨타임 (재사용 대기시간)
 unit.GetSkillCooling = function(itemDataID)
 end
 
 --* 플레이어를 특정 방향으로 이동시킵니다
----@param dirX float 방향 X
----@param dirY float 방향 Y
+---@param dirX number 방향 X
+---@param dirY number 방향 Y
 unit.Go = function(dirX, dirY)
 end
 
 --* 특정 위치로 플레이어를 이동시킵니다
----@param posX float 대상 위치 X
----@param posY float 대상 위치 Y
+---@param posX number 대상 위치 X
+---@param posY number 대상 위치 Y
 unit.MoveToPosition = function(posX, posY)
 end
 
 --* SE 사운드 파일을 재생합니다
 ---@param name string 재생할 음악파일 이름 (EX : button.ogg)
----@param volume float 사운드 볼륨 0.0 ~ 1.0 (기본값 : 1)
+---@param volume number 사운드 볼륨 0.0 ~ 1.0 (기본값 : 1)
 unit.PlaySE = function(name, volume)
 end
 

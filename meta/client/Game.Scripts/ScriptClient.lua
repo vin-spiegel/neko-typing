@@ -5,7 +5,7 @@
 ---@field changeSlot Game.Scripts.ScriptChangeSlot 게임 화면 내의 교체 슬롯
 ---@field controller Game.Scripts.ScriptController 게임 화면 내의 방향키 패드(D-Pad) 객체
 ---@field field Game.Scripts.ScriptField 현재 내 플레이어가 접속해 있는 필드 객체
----@field frameRate float
+---@field frameRate number
 ---@field height integer 게임 화면의 세로 크기 (단위: 픽셀)
 ---@field id string 접속한 게임의 고유 UUID
 ---@field myPlayerUnit Game.Scripts.ScriptMyPlayerUnit
@@ -178,7 +178,7 @@ end
 
 ---* 일정 시간 후에, 정해진 함수를 실행합니다
 ---@param callback Closure 실행할 함수
----@param t float 실행시간까지의 대기시간 (초)
+---@param t number 실행시간까지의 대기시간 (초)
 Client.RunLater = function(callback, t)
 end
 

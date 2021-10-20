@@ -224,7 +224,7 @@
 --- **반환값:** 없음
 ---
 ---     [1] player: 말한 플레이어
----     [2] text: 플레이어가 말한 대사
+---     [2] msg: 플레이어가 말한 대사
 ---@field sayCallback Closure
 Server = {}
 

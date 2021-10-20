@@ -3,8 +3,8 @@
 ---@class Game.Scripts.ScriptUnit
 ---@field clanID integer 유닛의 클랜 ID
 ---@field dead boolean 유닛의 사망 여부
----@field dirX float 유닛의 X 방향 좌표 { get; set; }
----@field dirY float 유닛의 Y 방향 좌표 { get; set; }
+---@field dirX number 유닛의 X 방향 좌표 { get; set; }
+---@field dirY number 유닛의 Y 방향 좌표 { get; set; }
 ---@field exp integer 유닛의 경험치
 ---@field hp integer 체력
 ---@field id integer 유닛의 ID
@@ -19,8 +19,8 @@
 ---@field rigidbody Game.Scripts.ScriptRigidbody 유닛의 물리 효과 객체
 ---@field sortOrder integer 캐릭터를 보여주는 순서값 { get; set; }
 ---@field valid boolean 유닛의 유효 여부
----@field x float 유닛의 X 좌표 { get; set; }
----@field y float 유닛의 Y 좌표 { get; set; }
+---@field x number 유닛의 X 좌표 { get; set; }
+---@field y number 유닛의 Y 좌표 { get; set; }
 local unit = {}
 
 --* 유닛이 특정 버프를 가지고 있는지를 가져옵니다
