@@ -1,5 +1,5 @@
 # neko-typing(Test)
->네코랜드 docs의 자동완성기능과 툴팁을 제공합니다.
+>vscode에서 네코랜드 type을 추론 해주는 lua-language-server 서드파티입니다
 ## 설치방법
 ***필수:***
 
