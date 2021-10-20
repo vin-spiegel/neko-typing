@@ -1,59 +1,60 @@
 ---@meta
 ---하나의 유닛 버프에 대응하는 클래스입니다.
 ---@class ScriptUnitBuff
----@field dataID integer --버프 ID (데이터베이스)
----@field untilAt double --버프의 종료 시각입니다 os.date("*t",untilAt) 을 통한 시간 가공이 필요합니다
----@field Destroy LuaFunction --해당 버프를 제거합니다
+---@field dataID integer #버프 ID (데이터베이스)
+---@field untilAt double #버프의 종료 시각입니다 os.date("*t",untilAt) 을 통한 시간 가공이 필요합니다
+---@field Destroy LuaFunction #해당 버프를 제거합니다
 
 ---하나의 유닛에 대응하는 클래스입니다
 ---
 ---유닛의 정보를 가져오거나 설정할 수 있습니다
 ---@class ScriptUnit
----@field customData LuaTable --커스텀 데이터
----@field agi integer --유닛의 민첩 스탯
----@field agility integer --유닛의 민첩 스탯
----@field atk integer --유닛의 공격력 스탯
----@field attack integer --유닛의 공격력 스탯
----@field buffs ScriptUnitBuff --유닛의 버프를 ScriptUnitBuff 형식으로 얻어옵니다
----@field characterData integer
----@field characterID integer
----@field cumulativeEXP integer
----@field def integer
----@field defense integer
----@field dirX integer
----@field dirY integer
----@field exp integer
----@field fatigue integer
----@field field integer
----@field gameMoney integer
----@field hp integer
----@field id integer
----@field initField integer
----@field isGM integer
----@field job integer
----@field level integer
----@field lucky integer
----@field luk integer
----@field magicAtk integer
----@field magicAttack integer
----@field magicDef integer
----@field magicDefense integer
----@field mass integer
----@field maxHP integer
----@field maxMP integer
----@field monsterData integer
----@field monsterID integer
----@field moveSpeed integer
----@field mp integer
----@field name integer
----@field nameColor integer
----@field party integer
----@field partyID integer
----@field player ScriptRoomPlayer
----@field teamTag integer
----@field type integer
----@field x integer
----@field y integer
+---@field customData LuaTable 커스텀 데이터
+---@field agi integer 유닛의 민첩 스탯
+---@field agility integer 유닛의 민첩 스탯
+---@field atk integer 유닛의 공격력 스탯
+---@field attack integer 유닛의 공격력 스탯
+---@field buffs ScriptUnitBuff 유닛의 버프를 ScriptUnitBuff 형식으로 얻어옵니다
+---@field characterData TGameCharacter 유닛의 데이터를 TGameCharacter 형식으로 얻어옵니다
+---@field characterID integer 유닛의 캐릭터 ID { get; set; }
+---@field cumulativeEXP integer 플레이어 유닛의 누적 경험치
+---@field def integer 유닛의 방어력 스탯
+---@field defense integer 유닛의 방어력 스탯
+---@field dirX integer 유닛의 X 방향 좌표 { get; set; }
+---@field dirY integer 유닛의 Y 방향 좌표
+---@field exp integer 플레이어 유닛의 현재 경험치
+---@field fatigue integer 유닛의 현재 피로도 { get; set; }
+---@field field ScriptField 이 유닛이 접속해 있는 필드의 객체
+---@field gameMoney integer 유닛이 가진 골드 (이 유닛이 플레이어 유닛일 경우에만 동작합니다) { get; set; }
+---@field hp integer 유닛의 현재 체력 => get set
+---@field id integer 유닛의 고유 ID
+---@field initField ScriptField 이 몬스터 유닛이 처음 접속한 맵(필드)의 ScriptField 객체
+---@field isGM integer 이 플레이어가 게임 관리자(마스터)인지 반환합니다
+---@field job integer 유닛의 직업 { get; set; }
+---@field level integer 유닛의 레벨
+---@field lucky integer 유닛의 행운 스탯
+---@field luk integer 유닛의 행운 스탯
+---@field magicAtk integer 유닛의 마법 공격력 스탯
+---@field magicAttack integer 유닛의 마법 공격력 스탯
+---@field magicDef integer 유닛의 마법 방어력 스탯
+---@field magicDefense integer 유닛의 마법 방어력 스탯
+---@field mass number 유닛의 무게 { get; set; }
+---@field maxHP integer 유닛의 최대 체력 { get; set; }
+---@field maxMP integer 유닛의 최대 마력 { get; set; }
+---@field monsterData TGameMonster 유닛의 몬스터 데이터
+---@field monsterID integer 유닛의 몬스터 ID { get; set; }
+---@field moveSpeed integer 유닛의 이동속도 { get; set; }
+---@field mp integer 유닛의 현재 마력 { get; set; }
+---@field name string 유닛의 이름 { get; set; }
+---@field nameColor UInt32 유닛의 이름 색
+---@field party ScriptParty 현재 유닛이 참가한 파티의 데이터를 얻어옵니다.
+---@field partyID integer 유닛이 속한 파티의 ID
+---@field player ScriptRoomPlayer 유닛의 플레이어 객체 (이 유닛이 플레이어 유닛일 경우에만 동작합니다)
+---@field teamTag UInt32 유닛의 팀 태그
+---@field type integer 유닛의 종류 (0: 플레이어, 1: 이벤트, 2: 몬스터)
+---@field x number 유닛의 X 좌표 { get; set; }
+---@field y number 유닛의 Y 좌표 { get; set; }
+
 unit = {}
 
 --해당 유닛에 상태를 추가합니다

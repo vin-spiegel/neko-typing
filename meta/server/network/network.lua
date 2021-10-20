@@ -55,11 +55,17 @@
 ---@field type integer
 
 ---@class TGameMapEventCommand
+---@class TQuickSlot
+
 ---@class TGameTrait
+---network.TGameBuff
 ---@class TGameBuff
+---network.TGameAnimation
 ---@class TGameAnimation
 ---@class TGameMapEventPage
+---network.TGameCharacter
 ---@class TGameCharacter
+---network.TGameJob
 ---@class TGameJob
 ---@class TGameMapStub
 ---몬스터 정보가 들어있는 객체입니다

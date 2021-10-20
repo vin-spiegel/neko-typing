@@ -1,7 +1,7 @@
 ---@meta
----@class System.Object
----@class System.Collections.Generic.List --number
+---@class float
 ---@class Closure
 ---@class LuaTable
 ---@class LuaFunction
 ---@class double
+---@class UInt32

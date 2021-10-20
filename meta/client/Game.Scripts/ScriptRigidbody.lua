@@ -1,0 +1,3 @@
+---@meta
+--물리 효과를 조정하는 클래스입니다
+---@class Game.Scripts.ScriptRigidbody

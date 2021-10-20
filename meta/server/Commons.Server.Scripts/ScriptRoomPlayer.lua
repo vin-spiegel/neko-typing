@@ -36,14 +36,12 @@ player.GetItem = function(id)
 end
 
 ---현재 플레이어가 가지고 있는 아이템들을 리스트 형식으로 반환합니다.
----@generic TItem TItem객체가 담긴 리스트
----@return TItem List
+---@return TItem[] List 가져온 아이템 리스트 (TItem 리스트)
 player.GetItems = function()
 end
 
 ---플레이어의 창고 아이템 목록을 가져옵니다
----@generic TItem TItem객체가 담긴 리스트
----@return TItem List
+---@return TItem[] List 가져온 아이템 리스트 (TItem 리스트)
 player.GetStorageItems = function()
 end
 
