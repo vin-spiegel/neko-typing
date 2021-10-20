@@ -1,0 +1,3 @@
+---@meta
+--* 필드에 드랍된 아이템에 대응하는 클래스입니다
+---@class Commones.Server.Scripts.ScriptDropItem

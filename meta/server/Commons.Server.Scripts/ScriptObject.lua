@@ -1,0 +1,4 @@
+---@meta
+---*스크립팅 오브젝트의 기본 클래스입니다.
+---@class ScriptObject
+---@field customData any[] 커스텀 데이터 { get; set; }

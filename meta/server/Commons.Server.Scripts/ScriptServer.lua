@@ -1,7 +1,5 @@
 ---@meta
 
----@class ScriptField
----@class Server.Field
 ---@class ScriptParty
 ---@class ScriptDropItem
 ---@class ScriptClan
@@ -24,7 +22,7 @@
 ---     클랜 생성이 성공했는지 (True: 클랜 생성 성공, False: 클랜 생성 실패)
 ---@field createClan Closure
 ---현재 게임에 생성된 모든 맵(필드)를 가져옵니다.
----@field fields ScriptField
+---@field fields Commons.Server.Scripts.ScriptField
 --- 아이템이 추가되었을 때 호출되는 이벤트입니다
 ---
 --- **호출될 함수의 인자 형식:**
@@ -228,6 +226,8 @@
 ---@field sayCallback Closure
 Server = {}
 
+Server.onUnitLevelUp.Add()
+
 ---드롭 아이템을 생성합니다
 ---@param dataID number 아이템의 데이터ID
 ---@param count number 갯수
@@ -245,7 +245,7 @@ end
 
 ---특정 맵 ID의 필드를 임시로 생성합니다
 ---@param mapID number 생성할 맵 데이터ID
----@return ScriptField ScriptField 생성된 필드 객체
+---@return Commons.Server.Scripts.ScriptField ScriptField 생성된 필드 객체
 Server.CreateField = function(mapID)
 end
 
@@ -316,7 +316,7 @@ end
 ---특정 맵 ID의 필드를 가져옵니다.
 ---@param mapID number 가져올 맵 데이터 ID
 ---@param channelID number 채널 ID
----@return ScriptField ScriptField ID에 맞는 필드 객체
+---@return Commons.Server.Scripts.ScriptField ScriptField ID에 맞는 필드 객체
 Server.GetField = function(mapID, channelID)
 end
 
