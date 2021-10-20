@@ -54,8 +54,7 @@
 ---@field type integer 유닛의 종류 (0: 플레이어, 1: 이벤트, 2: 몬스터)
 ---@field x number 유닛의 X 좌표 { get; set; }
 ---@field y number 유닛의 Y 좌표 { get; set; }
-
-unit = {}
+local unit = {}
 
 --해당 유닛에 상태를 추가합니다
 ---@param buffID integer 버프ID
