@@ -1,65 +1,13 @@
 ---@meta
 
----network.TItem
----@class TItem
----@field count integer
----@field dataID integer
----고유 id
----@field id integer
----@field index integer
----@field inTrade boolean
----@field level integer
----@field options TItemOption
----@field useCloudResource boolean
-
----network.TItemOption
----@class TItemOption
----@field statID integer
----@field type integer
----@field value number
-
----network.TGameItem
----@class TGameItem
----@field actionName string
----@field agility integer
----@field animationID integer
----@field attack integer
----@field buyerPrice integer
----@field canDrop boolean
----@field canExchangeTrade boolean
----@field canSell boolean
----@field canStorage boolean
----@field canTrade boolean
----@field coolTime number
----@field damageFormula string
----@field damageType integer
----@field defense integer
----@field desc string
----@field hasCritical boolean
----@field imageID string
----@field l_desc string
----@field l_name string
----@field lucky integer
----@field magicAttack integer
----@field magicDefense integer
----@field maxCount integer
----@field maxHP integer
----@field maxMP integer
----@field memo string
----@field name string
----@field notConsumed boolean
----@field oldTraits TGameTrait
----@field sellerPrice integer
----@field spineImageID string
----@field traits TGameMapEventCommand
----@field type integer
-
 ---@class TGameMapEventCommand
+
+--* network.TQuickSlot
 ---@class TQuickSlot
+---@field itemID integer { get; set; }
+---@field skillDataID integer { get; set; }
 
 ---@class TGameTrait
----network.TGameBuff
----@class TGameBuff
 ---network.TGameAnimation
 ---@class TGameAnimation
 ---@class TGameMapEventPage
@@ -70,9 +18,6 @@
 ---@class TGameMapStub
 ---몬스터 정보가 들어있는 객체입니다
 ---@class TGameMonster
-
----@class network.Tskill
----@class TGameSkill
 
 ---@class TGameStrings
 ---@class TGameTileset

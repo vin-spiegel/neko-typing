@@ -1,0 +1,14 @@
+---@meta
+--* 이미지를 나타내는 GUI 클래스입니다
+---@class Game.Scripts.ScriptImage:Game.Scripts.ScriptBaseControl
+---@field fillAmount number --* 채우기 모드로 사용할 경우 해당 채우기 값 (0 ~ 1.0)
+---@field fillClockwise boolean --* 시계 방향으로 채울 것인지의 여부 (True: 시계 방향, False: 반시계방향)
+--* 채우는 방법
+--  * 가로 = 0
+--  * 세로 = 1
+--  * 방사형 90 = 2
+--  * 방사형 180 = 3
+--  * 방사형 360 = 4
+---@field fillMethod number
+---@field image number --* 이미지의 경로 (변경만 가능합니다)
+---@field imageType number --* 이미지의 출력 방식입니다 (Simple = 0, Sliced = 1, Tiled = 2, Filled = 3)

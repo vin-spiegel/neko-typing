@@ -24,11 +24,11 @@
 ---@field dirY integer 유닛의 Y 방향 좌표
 ---@field exp integer 플레이어 유닛의 현재 경험치
 ---@field fatigue integer 유닛의 현재 피로도 { get; set; }
----@field field ScriptField 이 유닛이 접속해 있는 필드의 객체
+---@field field Commons.Server.Scripts.ScriptField 이 유닛이 접속해 있는 필드의 객체
 ---@field gameMoney integer 유닛이 가진 골드 (이 유닛이 플레이어 유닛일 경우에만 동작합니다) { get; set; }
 ---@field hp integer 유닛의 현재 체력 => get set
 ---@field id integer 유닛의 고유 ID
----@field initField ScriptField 이 몬스터 유닛이 처음 접속한 맵(필드)의 ScriptField 객체
+---@field initField Commons.Server.Scripts.ScriptField 이 몬스터 유닛이 처음 접속한 맵(필드)의 ScriptField 객체
 ---@field isGM integer 이 플레이어가 게임 관리자(마스터)인지 반환합니다
 ---@field job integer 유닛의 직업 { get; set; }
 ---@field level integer 유닛의 레벨

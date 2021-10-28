@@ -1,0 +1,21 @@
+---@meta
+---network.TGameBuff
+---@class TGameBuff
+---@field damageFormula string
+---@field damageType integer
+---@field debuffCondition integer
+---@field debuffTime integer
+---@field desc string
+---@field hasCritical boolean
+---@field iconID string
+---@field isRemoveBuff boolean
+---@field l_desc string
+---@field l_name string
+---@field memo string
+---@field name string
+---@field oldTraits TGameTrait[]
+---@field showAnimation boolean
+---@field showAnimationID integer
+---@field tickTime number
+---@field traits TGameMapEventCommand[]
+---@field type integer

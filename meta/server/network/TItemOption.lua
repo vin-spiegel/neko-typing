@@ -1,0 +1,6 @@
+---@meta
+---network.TItemOption
+---@class TItemOption
+---@field statID NekoStats
+---@field type integer (1: 직업 (+), 2: 직업 (%), 3: 아이템 (+), 4: 아이템 (%))
+---@field value number

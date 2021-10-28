@@ -87,7 +87,7 @@
 ---     [2] level: 펫 레벨
 ---@field onPetUnitLevelUp ScriptEventPublisher
 --- 유닛이 스탯을 갱신했을 때 호출되는 이벤트입니다
----
+--- ( 발동시점: 접속, 장비장착/해제, 레벨업, 버프부여/해제 )
 --- **호출될 함수의 인자 형식:**
 --- ```
 ---  function(unit: ScriptUnit)
@@ -200,7 +200,7 @@
 ---     [2] party: 나갈 파티
 ---@field playerLeavePartyCallback Closure
 --- 현재 게임에 접속해 있는 플레이어 목록
----@field players LuaTable { ScriptRoomPlayer }
+---@field players ScriptRoomPlayer[]
 --- 몬스터가 죽었을 때의 커스텀 보상 콜백 함수입니다
 ---
 --- **콜백 함수의 형식:**
@@ -224,6 +224,8 @@
 ---     [1] player: 말한 플레이어
 ---     [2] msg: 플레이어가 말한 대사
 ---@field sayCallback Closure
+--- 유닛의 데미지 계산 공식 콜백 함수입니다 (데미지 공식을 커스텀 할 수 있습니다.)
+---@field damageCallback fun(from: ScriptUnit, to: ScriptUnit, dmg: integer, skillDataID: integer, ciritical?: boolean, visible?: booelan)
 Server = {}
 
 Server.onUnitLevelUp.Add()
@@ -464,16 +466,4 @@ end
 Server.StartState = function(state, time)
 end
 
---- 유닛의 데미지 계산 공식 콜백 함수입니다 (데미지 공식을 커스텀 할 수 있습니다.)
----@param from ScriptUnit 공격 유닛
----@param to ScriptUnit 대상 유닛
----@param dmg integer 공격의 데미지
----@param skillDataID integer 스킬의 데이터 ID
----@param critical? boolean 크리티컬 여부
----@param visible? boolean 피격 데미지 표시 여부
----@return integer damage 계산된 데미지
----@return boolean critical?  (+ 크리티컬 여부)
----@return boolean visible? (+ 피격 데미지 표시 여부)
-function Server.damageCallback(from, to, dmg, skillDataID, critical, visible)
-end
 return Server

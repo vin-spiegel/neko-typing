@@ -1,0 +1,52 @@
+---@meta
+---network.TGameItem
+---@class TGameItem
+---@field actionName string
+---@field agility integer
+---@field animationID integer
+---@field attack integer
+---@field buyerPrice integer
+---@field canDrop boolean
+---@field canExchangeTrade boolean
+---@field canSell boolean
+---@field canStorage boolean
+---@field canTrade boolean
+---@field coolTime number
+---@field damageFormula string
+---@field damageType integer
+---@field defense integer
+---@field desc string
+---@field hasCritical boolean
+---@field imageID string
+---{{스탯명Plus}}
+---{{attackPlusOption}}
+---{{attackPlusTotal}}
+---{{attackPercent}}
+---@field l_desc string
+---@field l_name string
+---@field lucky integer
+---@field magicAttack integer
+---@field magicDefense integer
+---@field maxCount integer
+---@field maxHP integer
+---@field maxMP integer
+---@field memo string
+---@field name string
+---@field notConsumed boolean
+---@field oldTraits TGameTrait
+---@field sellerPrice integer
+---@field spineImageID string
+---@field traits TGameMapEventCommand
+--* 네코 아이템 타입
+---     - 0 HAT 모자
+---     - 1 ARMOR 갑옷
+---     - 2 WEAPON 무기
+---     - 3 SHIELD 방패
+---     - 4 SHOES 신발
+---     - 5 RING 반지
+---     - 6 ACC 악세서리
+---     - 7 WING 날개
+---     - 8 POTION 포션
+---     - 9 MATERIAL 재료
+---     - 10 CONSUMABLE 소모품
+---@field type NekoItemType

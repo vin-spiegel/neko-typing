@@ -1,0 +1,11 @@
+---@meta
+---network.TItem
+---@class TItem:System.Object
+---@field count integer
+---@field dataID integer
+---@field id integer 고유 ID
+---@field index integer
+---@field inTrade boolean
+---@field level integer
+---@field options TItemOption[]
+---@field useCloudResource boolean

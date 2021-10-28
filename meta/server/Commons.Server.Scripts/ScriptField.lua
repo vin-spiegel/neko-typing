@@ -3,7 +3,7 @@
 ---@class Commons.Server.Scripts.ScriptField:ScriptObject
 ---@field channelID integer 필드의 채널 ID
 ---@field dataID integer 필드의 데이터 ID
----@field dropItems Commones.Server.Scripts.ScriptDropItem[] 해당 필드에 있는 모든 드랍 아이템을 배열 형식으로 가져옵니다
+---@field dropItems Commons.Server.Scripts.ScriptDropItem[] 해당 필드에 있는 모든 드랍 아이템을 배열 형식으로 가져옵니다
 ---@field height integer 필드의 세로 크기
 ---@field width integer 필드의 가로 크기
 ---@field maxPlayers integer 필드의 최대 플레이어 수

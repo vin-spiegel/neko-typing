@@ -1,0 +1,27 @@
+---@meta
+---@class network.Tskill
+---@field dataID integer
+---@field level integer
+--* network.TGameSkill
+---@class TGameSkill:System.Object
+---@field actionName string
+---@field animationID integer
+---@field consumeHP integer
+---@field consumeMP integer
+---@field coolTime number
+---@field criticalPercent number
+---@field damageFormula string
+---@field damageType integer
+---@field desc integer
+---@field hasCritical boolean
+---@field iconID string
+---@field memo string
+---@field name string
+---@field l_desc string
+---@field l_name string
+---@field oldTraits TGameTrait[]
+---@field sturnEnable boolean
+---@field sturnTarget integer
+---@field sturnTime number
+---@field traits TGameMapEventCommand[]
+---@field type integer 0: 물리공격, 1: 마법공격

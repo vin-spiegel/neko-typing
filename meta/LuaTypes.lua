@@ -1,6 +1,0 @@
----@meta
----@class number
----@class LuaTable
----@class LuaFunction
----@class double
----@class UInt32
