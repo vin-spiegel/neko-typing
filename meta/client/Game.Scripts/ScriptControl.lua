@@ -66,6 +66,12 @@ end
 ---@class Game.Scripts.ScriptPanel:Game.Scripts.ScriptControl
 ---@field color Game.Scripts.ScriptColor 패널의 배경 색상
 ---@field masked boolean 마스크 기능의 사용 여부 {get;set;}
+Panel = {}
+
+--* 패널에 레이아웃 페이지를 로드합니다
+---@param pageName string 대상 페이지 이름
+Panel.LoadPage = function(pageName)
+end
 
 --* 새 패널 객체를 생성합니다
 ---@param rect? Game.Scripts.ScriptRect
@@ -73,7 +79,29 @@ end
 Panel = function(rect)
 end
 
---* 패널에 레이아웃 페이지를 로드합니다
----@param pageName string 대상 페이지 이름
-Panel.LoadPage = function(pageName)
-end
+--* 텍스트의 정렬 방식
+---@alias textAlign integer
+---| '1' # Upperleft fdfd
+---| '2' # Upperleft
+---| '3' # Upperleft
+---| '4' # Upperleft
+
+--* 화면 GUI 상의 스크립트 버튼 클래스입니다.
+--* 사용자의 클릭을 감지하고 클릭 이벤트에 대한 처리기를 추가할 수 있습니다.
+---@class Game.Scripts.ScriptButton:Game.Scripts.ScriptControl
+---@field color Game.Scripts.ScriptColor 버튼의 색상
+---@field onClick ScriptEventPublisher 클릭시 호출되는 이벤트
+---@field text string 버튼 텍스트
+--* 1 - `UpperLeft`
+--* 2 - `UpperCenter`
+--* 3 - `UpperRight`
+--* 4 - `MiddleLeft`
+--* 5 - `MiddleCenter`
+--* 6 - `MiddleRight`
+--* 7 - `LowerLeft`
+--* 8 - `LowerCenter`
+--* 9 - `LowerRight`
+---@field textAlign integer
+---@field textColor Game.Scripts.ScriptColor 버튼 텍스트의 색상
+---@field textSize integer 버튼 텍스트의 크기
+Button = {}
